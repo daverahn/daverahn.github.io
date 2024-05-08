@@ -1,0 +1,177 @@
+<html>
+<head>
+<title> Weather Links </title>
+</head>
+
+<body bgcolor="9EF3FF">
+<div id="container" style="width:625px">
+
+<!-- HEADER -->
+  <div id="header" style="background-color:#9EF3FF;">
+    <h1>Weather Links</h1>
+    <h3> Here are some links to various weather data. Pick your favorites!</h3>
+  </div>
+
+<!-- MENU -->
+  <div id="menu" style="padding:5px;border-style:solid;border-width:thin;border-color:#FFFFFF;background-color:#9EF3FF;height:1950px;width:100px;float:left;">
+    <h2>Menu</h2>
+      <a href="#kan">Kansas Wx</a><br>
+      <a href="#nws">NOAA sites</a><br>
+      <a href="#rad">Radar</a><br>
+      <a href="#sat">Satellite</a><br>
+      <a href="#nwp">NWP</a><br>
+      <a href="#misc">Misc.</a><br>
+      <a href="#web">Web Programs</a><br>
+  </div>
+
+<!-- BODY -->
+  <div id="content" style="padding:5px;background-color:#9EF3FF;height:1950px;width:500px;float:left;">
+    <a id="kan"></a>
+    <h2>Kansas Weather</h2>
+    <a href="http://w1.weather.gov/data/obhistory/KLWC.html">Surface Observations at Lawrence Municipal Airport</a><br>
+    <a href="http://radar.weather.gov/radar.php?rid=twx&product=N0R&overlay=11101111&loop=no">The Topeka Doppler Radar</a><br>
+    <a href="https://www.star.nesdis.noaa.gov/GOES/GOES16_sector_band.php?sector=umv&band=GEOCOLOR&length=24">Visible Satellite</a><br>
+    <a href="https://www.star.nesdis.noaa.gov/GOES/GOES16_sector_band.php?sector=umv&band=13&length=24">Infrared Satellite</a><br>
+<!--
+    <a href="http://weather.rap.ucar.edu/satellite/displaySat.php?region=ICT&itype=vis&size=large">Visible Satellite</a><br>
+    <a href="http://weather.rap.ucar.edu/satellite/displaySat.php?region=ICT&itype=irbw&size=large">Infrared Satellite (Black and White)</a><br>
+    <a href="http://weather.rap.ucar.edu/satellite/displaySat.php?region=ICT&itype=ir&size=large">Infrared Satellite (Color)</a><br>
+    <a href="http://weather.rap.ucar.edu/satellite/displaySat.php?region=ICT&itype=wv&size=large">Water Vapor Satellite</a><br>
+-->
+
+    <script type="text/javascript">
+    var currentTime = new Date()
+    var month = currentTime.getMonth() + 1
+    if (month < 10){ month = "0" + month }
+    var day = currentTime.getDate()
+    if (day < 10){ day = "0" + day }
+    var year = currentTime.getFullYear() - 2000
+
+    document.write("<a href=\"http://www.spc.noaa.gov/exper/soundings/" + year + month + day + "12_OBS/TOP.gif\">");
+    document.write("Morning (1200 UTC) Topeka sounding from SPC");
+    document.write("</a><br>");
+
+    document.write("<a href=\"http://www.spc.noaa.gov/exper/soundings/" + year + month + day + "00_OBS/TOP.gif\">");
+    document.write("Evening (0000 UTC) Topeka sounding from SPC");
+    document.write("</a><br>");
+    </script>
+
+    Model forecasts for Lawrence using Model Output Statistics (MOS)
+    <li><a href="http://www.nws.noaa.gov/cgi-bin/mos/getmet.pl?sta=KLWC">NAM MOS</a>
+    <li><a href="http://www.nws.noaa.gov/cgi-bin/mos/getmav.pl?sta=KLWC">GFS MOS</a>
+    <li><a href="http://www.nws.noaa.gov/cgi-bin/mos/getmex.pl?sta=KLWC">GFSX MOS</a>
+    <p style="font-size:80%;"><a href="http://www.nws.noaa.gov/mdl/synop/mavcard.php">Guide to reading MOS</a></p>
+    
+    <!-- ------------------------NWS------------------------ -->
+    <a id="nws"></a>
+    <h2>National Oceanic and Atmospheric Administration (NOAA) Sites</h2>
+    The specialized divisions from NOAA are great sources:
+    <ul>
+      <li><a title="NWS" href="http://forecast.weather.gov/MapClick.php?CityName=Lawrence&state=KS">National Weather Service (NWS) for Lawrence, KS</a>
+      <li><a title="SPC" href="http://www.spc.noaa.gov/">Storm Prediction Center (SPC)</a>
+      <ul><li>For forecasting convection, the <a title="SPC" href="http://www.spc.noaa.gov/exper/mesoanalysis/new/viewsector.php?sector=14#"> mesoanalysis </a> is very useful.</ul>
+      <li><a title="NHC" href="http://www.nhc.noaa.gov/">National Hurricane Center (NHC)</a>
+      <li><a title="CPC" href="http://www.cpc.ncep.noaa.gov/">Climate Prediction Center (CPC)</a>
+      <ul><li><a title="Index" href="http://www.esrl.noaa.gov/psd/data/climateindices/list/">Climate Indices List</a></ul>
+    </ul>
+
+
+    <!-- ------------------------Radar------------------------ -->
+    <a id="rad"></a>
+    <h2>Radar Products</h2>
+    <a title="" href="http://radar.weather.gov">Radar sites from the NWS</a><br>
+    <a title="" href="http://weather.rap.ucar.edu/radar">Radar sites from NCAR/UCAR</a><br>
+    <a title="" href="http://weather.cod.edu/buildmap/nexrad_build.php">Radar sites from the COD (and Dual-Pol)</a><br>
+    <a title="" href="http://www.aos.wisc.edu/weather/wx_obs/Nexrad.html">Radar composites from UW-Madison</a>
+
+
+    <!-- ------------------------Satellite------------------------ -->
+    <a id="sat"></a>
+    <h2>Satellite Products</h2>
+    <a title="" href="http://weather.rap.ucar.edu/satellite">Satellite imagery from NCAR/UCAR</a><br>
+    <a title="" href="http://www.nrlmry.navy.mil/NEXSAT.html">Satellite imagery from the Navy, very nice and lots of products</a><br>
+    <a title="" href="http://www.aos.wisc.edu/weather/wx_obs/Satellite.html">Satellite imagery from UW-Madison</a><br>
+    <a title="" href="http://rammb.cira.colostate.edu/ramsdis/online/goes-west_goes-east.asp">Satellite imagery from RAMSDIS</a><br>
+    <br>
+    <a title="" href="http://manati.star.nesdis.noaa.gov/datasets/ASCATData.php/">Scatterometer Data (surface wind over oceans) </a><br>
+    <a title="" href="http://tropic.ssec.wisc.edu/real-time/mimic-tpw/epac/main.html">Total Precipitable Water from SSEC</a><br>
+    <a title="" href="http://www.ospo.noaa.gov/Products/bTPW/index.html">Total Precipitable Water from NESDIS.</a><br>
+    <a title="" href="http://www.ssec.wisc.edu/data/">The SSEC has lots of non-standard products</a><br>
+    <a title="" href="http://www.class.noaa.gov/">The CLASS site provides raw satellite data for free.</a><br>
+ 
+
+    <!-- ------------------------NWP------------------------ -->
+    <a id="nwp"></a>
+    <h2>Numerical Weather Prediction (NWP)</h2>
+    <a title="" href="http://weather.rap.ucar.edu/model/">Model output from NCAR/UCAR</a><br>
+    <a title="" href="http://www.aos.wisc.edu/weather/Models">Model output from UW-Madison</a><br>
+    <a title="" href="http://weather.cod.edu/forecast/">Model output from COD</a><br>
+    <a title="" href="http://www.twisterdata.com/">Model output from TwisterData</a><br>
+    <a title="" href="http://wxmaps.org/">Model output from wxmaps.org - includes <i>global maps</i></a><br>
+    <a title="" href="http://www.esrl.noaa.gov/psd/map/images/ens/ens.html#us">Model ensemble (spaghetti) plots</a><br>
+    <a title="" href="http://www.met.sjsu.edu/weather/models.html">A GFS-ECMWF comparison at SJSU</a><br>
+    <a title="" href="http://rapidrefresh.noaa.gov/">Rapid Refresh (hourly)</a><br>
+    <a title="" href="http://ruc.noaa.gov/hrrr/">High Resolution Rapid Refresh (3 km)</a><br>
+    <br>
+    <a title="" href="http://www.nws.noaa.gov/mdl/synop/products.php">MOS information from NWS</a><br>
+    <a title="" href="http://leonardo.met.tamu.edu/Weather_Interface">MOS text interface from Texas A&M</a><br>
+    <br>
+    <a title="" href="http://derecho.math.uwm.edu/models">Hurricane tracks from UW-Milwaukee</a><br>
+    <br>
+    <a title="" href="http://weather.cod.edu/buildmap/analysis/isent_build.php">Isentropic analysis from COD</a><br>
+    <a title="" href="http://www.atmo.arizona.edu/~tgalarneau/realtime/diagnostics.html">Real-Time QG Diagnostics</a><br>
+    <br>
+    <a title="" href="https://rucsoundings.noaa.gov/">Interactive forecast (and observed) soundings are found at ESRL/GSD.</a>
+
+
+    <!-- ------------------------MISC------------------------ -->
+    <a id="misc"></a>
+    <h2>Other sources of data</h2>
+    <a title="" href="http://cci-reanalyzer.org/">Climate Reanalyzer: Neat site for lots of different products</a><br>
+    <br>
+    <a title="" href="http://www.spc.noaa.gov/exper/soundings/">Soundings from the SPC, great for severe weather</a><br>
+    <a title="" href="http://weather.uwyo.edu/upperair/sounding.html">Soundings from UWyo, easy to get historical soundings</a><br>
+    <br>
+    <a title="" href="http://weather.rap.ucar.edu">Main page from NCAR/UCAR</a><br>
+    <a title="" href="http://www.aos.wisc.edu/weather">Main page from UW-Madison</a><br>
+    <a title="" href="http://weather.uwyo.edu">Main page from UWyo</a><br>
+    <a title="" href="http://www.meteo.psu.edu/~fxg1/ewall.html">Main page from PSU</a><br>
+    <a title="" href="http://www.atmos.washington.edu/mm5rt">Pacific Northwest Environmental Forecasts and Observations</a><br>
+    <br>
+    <a title="" href="http://www.ndbc.noaa.gov/">National Data Buoy Center</a><br>
+    <a title="" href="http://www.sccoos.org/interactive-map/">Tons of observations for southern CA.</a><br>
+    <br>
+    <a title="" href="http://www.esrl.noaa.gov/psd/cgi-bin/data/getpage.pl">Past Climate Data from ESRL</a>
+    <br>
+    <a title="" href="http://xmacis.rcc-acis.org/">Historical Daily Time Series</a>    
+    <br>
+
+
+    <!-- ------------------------Web-based interfaces------------------------ -->
+    <a id="web"></a>
+    <h2>Programs</h2>
+    <ul>
+      <li>Integrated Data Viewer (IDV) is available at
+          <br> <a title="IDV" href="http://www.unidata.ucar.edu/software/idv/">www.unidata.ucar.edu/software/idv</a>.
+      <li>Bufkit is available at
+          <br> <a title="BUFKIT" href="http://www.wdtb.noaa.gov/tools/BUFKIT/">http://www.wdtb.noaa.gov/tools/BUFKIT/</a>.
+      <li>NSHARP is available at
+          <br> <a title="BUFKIT" href="http://www.unidata.ucar.edu/software/gempak/tutorial_v2/4.4_nsharp.html">www.unidata.ucar.edu/software/gempak/tutorial_v2/4.4_nsharp.html</a>.
+    </ul>
+
+
+
+  </div>
+
+
+<!-- FOOTER -->
+  <div id="footer" style="padding:5px;background-color:#9EF3FF;clear:both;text-align:center;">
+    <!-- <img src="tstorm.jpg"> -->
+    Last modified 12/1/2015.
+  </div>
+
+</div>
+
+
+
+
