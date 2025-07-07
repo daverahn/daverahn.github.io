@@ -229,10 +229,27 @@
 				</section>
 
 				<!-- Two.Five -->
-			
+				
+<script>
+function myFunction() {
+  var x = document.getElementById("faq_eng");
+  var y = document.getElementById("faq_esp");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    y.style.display = "none";
+  } else {
+    x.style.display = "none";
+    y.style.display = "block";
+  }
+}
+</script>
+
 				<section id="faq" class="wrapper style5 container">
 				<h1 style="font-size: 40px"><b>Frequently Asked Questions (FAQ)</b></h1>
-					<div class="row">
+					<div>
+				    <button onclick="myFunction()">English/Espanol</button>
+					</div>
+					<div id="faq_eng" class="row">
 						<section>
 							<details>
 							  <summary class="faq">
@@ -363,7 +380,24 @@
 								</p>
 							  </ul>
 							</details>
-							
+						</section>	
+					</div>
+					
+					<div id="faq_esp" class="row" style="display: none">
+						<section>
+							<details>
+							  <summary class="faq">
+							  <b>1. ¿Qué es Street Science?</b>
+							  </summary>
+							  <ul class="faq">
+								<p>Street Science es una red comunitaria de monitores que miden los niveles actuales 
+								de contaminación a nivel comunitario  se muestran en este sitio web. Esta red se creó 
+								en respuesta a las inquietudes de los residentes sobre la preocupaciones de salud, y 
+								la calidad del aire y su deseo de obtener datos a nivel de barrio.
+								</p>
+							  </ul>
+							</details>
+						</section>
 					</div>
 				</section>
 					
